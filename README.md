@@ -16,3 +16,6 @@
 ### Resume Template
 - Template for sections
 - Side bar? Careful it doesn't cover the nav bar.
+
+#### Issues
+- `componentDidMount` is only firing on the initial App.js load, not the changes between Projects and Resume pages.

@@ -10,9 +10,12 @@ class Header extends Component {
         }
     }
 
-    handleClick = (link) => (event) => {
-        console.log(link);
-        console.log(event.target.className);
+    componentDidMount(){
+        console.log(window.location.href);
+    }
+
+    handleClick = (input) => (event) => {
+        console.log(input);
     }
 
   render() {
