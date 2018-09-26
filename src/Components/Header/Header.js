@@ -6,16 +6,22 @@ class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-            
+            page: 'projects',
         }
     }
+
+    handleClick = (link) => (event) => {
+        console.log(link);
+        console.log(event.target.className);
+    }
+
   render() {
     return (
         <header className="App-header">
             <h1 className="App-title">Ryan Udelhoven</h1>
             <div className="navBar">
-                <Link to="/projects" className="navLink">Projects</Link>&nbsp; &nbsp; &nbsp; &nbsp;
-                <Link to="/resume" className="navLink">Resume</Link>
+                <Link to="/projects" className="navLink" onClick={this.handleClick('projects')}>Projects</Link>
+                <Link to="/resume" className="navLink" onClick={this.handleClick('resume')}>Resume</Link>
             </div>
         </header>
     );
@@ -23,3 +29,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+// &nbsp; &nbsp; &nbsp; &nbsp;
