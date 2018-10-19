@@ -6,15 +6,14 @@ class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-            page: 'projects',
+            page: '',
         }
     }
 
-    componentDidMount(){
-        console.log(window.location.href);
-    }
-
     handleClick = (input) => (event) => {
+        this.setState({
+            page: input,
+        })
         console.log(input);
     }
 
@@ -32,5 +31,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-// &nbsp; &nbsp; &nbsp; &nbsp;
